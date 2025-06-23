@@ -243,8 +243,23 @@ class Auth implements FilterInterface
 ```php
 'auth' => App\Filters\Auth::class
 ```
+![gambar](ss_gambar_pemrograman_web2-1/ssss3.png)
+### Selanjutnya buka file app/Config/Routes.php dan sesuaikan kodenya.
+![gambar](ss_gambar_pemrograman_web2-1/ssss4.png)
 
+## Percobaan Akses Menu Admin
+### Buka url dengan alamat http://localhost:8080/admin/artikel ketika alamat tersebut diakses maka, akan dimuculkan halaman login.
+![gambar](ss_gambar_pemrograman_web2-1/ssss2.png)
 
+## Fungsi Logout
+### Tambahkan method logout pada Controller User seperti berikut:
+```php
+  public function logout()
+{
+  session()->destroy();
+  return redirect()->to('/user/login');
+}
+```
 
 
 
